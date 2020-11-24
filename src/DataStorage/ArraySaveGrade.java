@@ -34,6 +34,8 @@ public class ArraySaveGrade {
 //        scores[3] = 89;
 //        scores[4] = 90;
 //        scores[5] = 90;
+        //创建记录相同成绩的数组
+        String[] str = new String[100];
 
         // 用随机数给成绩赋值
         for (int i = 0; i < 6; i++) {
@@ -51,6 +53,12 @@ public class ArraySaveGrade {
             System.out.println(names[i] + "的成绩为" + scores[i]);
             if (maxScore < scores[i]) {//比最大值，大的就取代最大值
                 maxScore = scores[i];
+                //下面这个if要实现保存相同的成绩，现在是个错的
+                if(maxScore==scores[i]){
+                    str[i]=names[i-1]+scores[i-1]+"和"+names[i]+scores[i]+"相等";
+                    System.out.println(str[i]);
+//下次写
+                }
                 maxScoreIndex = i;
             }
         }
