@@ -15,7 +15,6 @@ public class MultidimensionalArray {
 //            System.out.println(names[i]);
 //        }
 
-
         System.out.println("请输入需要生成多少年的成绩：");
         int yearCount = scanner.nextInt();//year :年
         //定义一个多维数组储存
